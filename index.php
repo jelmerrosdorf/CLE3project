@@ -1,6 +1,6 @@
 <?php
 
-echo "CLE 3 Project";
+echo "CLE 3 Project test";
 
 ?>
 
