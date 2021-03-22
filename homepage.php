@@ -55,6 +55,7 @@
 <footer>
     <a>CONTACT</a>
     <summary>
+
     <div class="menu">
             <a>Bird Rotterdam<br></a>
             <a>Raampoortstraat 24/26/28<br></a>
@@ -82,9 +83,7 @@
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
     </div>
-        <a href="https://bird-rotterdam.nl/">BIRD</a>
     </summary>
-
 </footer>
 </html>
 
