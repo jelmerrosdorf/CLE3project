@@ -1,13 +1,152 @@
 body {
-    /* margin: 0;
-    padding: 0;
-    color: rgb(33, 33, 33);
-    font-family: Roboto Slab, Arial, serif; */
-    background-color: #F5EFE6;
+    margin : 0px ;
+    padding : 0px ;
+    color : #000000;
+    font-family: sans-serif;
+    background-color: #000000;
+    text-decoration: none;
+}
+
+
+nav {
+    display:flex;
+    text-decoration: none;
+}
+
+nav div {
+    padding: 80px 50px;
+    flex-grow: 10;
+    text-align:center;
+    background-color:#F5EFE6;
+    transition: all 0.4s ease-out;
+    text-decoration: none;
+}
+
+nav div:hover {
+    background-color:#F5EFE6;
+    color:#5b95ff;
+    text-decoration: none;
+}
+
+
+
+div, section {
+    box-sizing:border-box;
+    text-decoration: none;
 }
 
 h1 {
-    margin: 0px;
-    padding: 10px;
+    margin: 5px;
 }
 
+a {
+    color:#000000;
+    font-size: 4em;
+    font-weight:bolder;
+}
+
+footer a {
+    color:#000000;
+}
+
+section {
+    margin: 0px;
+    padding: 200px;
+    background-color:#F5EFE6;
+}
+
+article {
+    margin: 30px;
+    padding: 30px;
+    background-color:#000000;
+    font-weight:bolder;
+    text-align:center;
+}
+
+article a{
+    color:white;
+    font-size: 1em;
+
+}
+
+/* procent van de parent */
+img {
+    width : 100%;
+}
+head {
+    background-color:#000000;
+    padding: 70px 10px;
+    font-size:1.5em;
+    font-weight:bolder;
+    color:white;
+    text-decoration: none;
+}
+
+header {
+    text-align:center;
+    padding: 40px 0px;
+    height:600px;
+    font-size:1.5em;
+    font-weight:bolder;
+    color:white;
+    background-image: url(https://res.cloudinary.com/yungdorf/image/upload/v1615838227/club_ygfuxt.png);
+    text-decoration: none;
+
+);
+    background-size:cover;
+    background-postion:center;
+}
+
+footer {
+    background-color:#ffffff;
+    text-align:center;
+    padding: 50px 0px;
+    font-size:1.5em;
+    font-weight:bolder;
+    color:white;
+    background-image: url(https://i.postimg.cc/vDRTLqtS/DSC-0135-klein.jp);
+);
+
+}
+summary {
+    padding: 100px 0px
+    font-size:0.5em;
+    font-weight:bolder;
+    color:white;
+}
+
+@media screen and (max-width: 550px) {
+    nav {    font-size:1.5em;
+        font-weight:bolder;
+        color:white;
+        display:block;
+    }
+}
+
+* {
+    box-sizing:border-box;
+}
+
+.menu {
+    width: 50%;
+    float: left;
+    padding: 150px;
+    border: 1px solid white;
+    color:black;
+    text-align: left;
+    font-size:0.3em;
+
+}
+
+.main {
+    width: 50%;
+    float: right;
+    padding: 50px;
+    border: 1px solid white;
+    color:black;
+    text-align: left;
+    font-size:0.3em;
+}
+a:link{
+    text-decoration: none;
+}
