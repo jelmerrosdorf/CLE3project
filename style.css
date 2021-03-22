@@ -94,7 +94,7 @@ header {
 
 );
     background-size:cover;
-    background-postion:center;
+    background-position:center;
 }
 
 footer {
@@ -109,7 +109,7 @@ footer {
 
 }
 summary {
-    padding: 100px 0px
+    padding: 100px 0px;
     font-size:0.5em;
     font-weight:bolder;
     color:white;
