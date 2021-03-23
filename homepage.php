@@ -12,13 +12,24 @@
 </head>
 
 <header>
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn">BIRD</button>
+            <div class="dropdown-content">
+                <a href="#">Album Collectie</a>
+                <a href="#">Register</a>
+                <a href="#">Doneren</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
     <h1>VR Chatroom BIRD Rotterdam</h1>
 </header>
 
-<nav>
+<main>
     <div><a href="https://bird-rotterdam.nl/support-bird/">SUPPORT BIRD</a></div>
 
-</nav>
+</main>
 
 <body>
 
