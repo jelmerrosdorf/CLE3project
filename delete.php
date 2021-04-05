@@ -10,7 +10,7 @@ require_once "includes/database.php";
 if (isset($_POST['submit'])) {
 
     // delete data where id is the one that got posted
-    $query = "DELETE FROM accounts WHERE id = " . mysqli_escape_string($db, $_POST['id']);
+    $query = "DELETE FROM myvrchat.users WHERE id = " . mysqli_escape_string($db, $_POST['id']);
 
     mysqli_query($db, $query) or die ('Error: ' . mysqli_error($db));
 
@@ -27,7 +27,7 @@ else if(isset($_GET['id'])) {
     $accountId = $_GET['id'];
 
     // Select everything from accounts where id is the earlier defined variable
-    $query = "SELECT * FROM accounts WHERE id = " . mysqli_escape_string($db, $accountId);
+    $query = "SELECT * FROM myvrchat.users WHERE id = " . mysqli_escape_string($db, $accountId);
     $result = mysqli_query($db, $query) or die ('Error: ' . $query);
 
     if(mysqli_num_rows($result) == 1)

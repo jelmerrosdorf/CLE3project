@@ -3,7 +3,7 @@
 $host = "localhost";
 $name = "root";
 $password = "";
-$database = "users";
+$database = "myvrchat";
 
 
 $db = mysqli_connect($host, $name, $password, $database)
