@@ -5,7 +5,7 @@
 require_once "includes/database.php";
 
 // SELECT query. get information from the table
-$query = "SELECT * FROM users";
+$query = "SELECT * FROM myvrchat.users";
 $result = mysqli_query($db, $query) or die ('Error: ' . $query);
 
 // set empty array for accounts.
@@ -35,6 +35,7 @@ mysqli_close($db);
         <th>Voornaam</th>
         <th>Achternaam</th>
         <th>E-mailadres</th>
+        <th>Wachtwoord</th>
     </tr>
     </thead>
     <tbody>
@@ -44,6 +45,7 @@ mysqli_close($db);
             <td><?= $account['firstname'] ?></td>
             <td><?= $account['surname'] ?></td>
             <td><?= $account['email'] ?></td>
+            <td><?= $account['password'] ?></td>
             <td><a href="delete.php?id=<?= $account['id'] ?>">Verwijder</a></td>
         </tr>
     <?php } ?>
