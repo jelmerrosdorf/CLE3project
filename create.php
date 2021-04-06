@@ -1,46 +1,46 @@
 <?php
 
+//Create page. Here you can register for an account.
+
+// fix undefined variable
 /** @var $db */
+
+//require the database
 require_once "includes/database.php";
 
+//if submit is pressed
 if (isset($_POST['submit'])) {
     $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
+    $surname = $_POST['surname'];
     $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $date = $_POST['date'];
-    $time = $_POST['time'];
+    $password = $_POST['password'];
 
+    // array for errors
     $errors = [];
     if (empty($firstname)) {
-        $errors[] = 'Het veldnaam met "Voornaam" mag niet leeg zijn.';
+        $errors[] = 'First name is required.';
     }
-    if (empty($lastname)) {
-        $errors[] = 'Het veldnaam met "Achternaam" mag niet leeg zijn.';
+    if (empty($surname)) {
+        $errors[] = 'Surname is required.';
     }
     if (empty($email)) {
-        $errors[] = 'Het veldnaam met "Email" mag niet leeg zijn.';
+        $errors[] = 'Email is required.';
     }
-    if (empty($phone)) {
-        $errors[] = 'Het veldnaam met "Telefoon" mag niet leeg zijn.';
-    }
-    if (empty($date)) {
-        $errors[] = 'Het veldnaam met "Datum" mag niet leeg zijn.';
-    }
-    if (empty($time)) {
-        $errors[] = 'Het veldnaam met "Tijd" mag niet leeg zijn.';
+    if (empty($password)) {
+        $errors[] = 'Password is required.';
     }
 
+    //if there are no errors, post to the database
     if (empty($errors)){
 
 
-        $query = "INSERT INTO users (firstname, lastname, email, phone, date, time)
-                  VALUES ('$firstname', '$lastname', '$email', '$phone', '$date', '$time')";
+        $query = "INSERT INTO myvrchat.users (firstname, surname, email, password)
+                  VALUES ('$firstname', '$surname', '$email', '$password')";
         $result = mysqli_query($db, $query);
 
 
         if ($result) {
-            header("Location: /hrfiles/CLE2-project-ramie/confirmation.php?firstname=$firstname&lastname=$lastname&email=$email&phone=$phone&date=$date&time=$time");
+            header("Location: CLE3project/confirmation.php?firstname=$firstname&lastname=$surname&email=$email&password=$password");
             exit;
         } else {
 
@@ -60,26 +60,29 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rami's Kapsalon</title>
-    <link   rel="stylesheet" href="css/stylesheet.css">
-
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 
-<header></header>
-
-<body>
-<nav>
-    <a href="home.php"><div>Home</div></a>
-    <a href="appointment.php"><div>Afspraak</div></a>
-    <a href="prices.php"><div>Tarieven</div></a>
-    <a href="contact.php"><div>Contact</div></a>
-    <a href="login.php"><div>Login</div></a>
-</nav>
+<header>
+    <nav>
+        <div class="dropdown">
+            <img src="https://res.cloudinary.com/yungdorf/image/upload/v1617715167/dropdownmenu_g4qw1b.png">
+            <div class="dropdown-content">
+                <a href="slideshow.php">Album Collection</a>
+                <a href="register.php">Register</a>
+                <a href="https://bird-rotterdam.nl/support-bird/">Donate</a>
+                <a href="#donate">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <h1>VR Chatroom BIRD Rotterdam</h1>
+</header>
 
 <main>
     <section>
-        <div class=" user-login">
-        <h1>Afspraak maken</h1><br>
+        <div id="register">
+        <h1>Make your account</h1><br>
             <?php if(isset($errors)) { ?>
 
                 <ul class="errors">
@@ -91,151 +94,21 @@ if (isset($_POST['submit'])) {
 
             <form action="" method="post">
 
-            <div><label for="firstname">Voornaam:</label>
+            <div><label for="firstname">Name:</label>
             <input type="text" id="firstname" name="firstname" value="<?php if (isset($firstname)) { echo $firstname; } ?>"/></div>
 
-            <div><label for="middlename">Tussenvoegsel:</label>
-            <input type="text" id="middlename" name="middlename"></div>
-
-            <div><label for="lastname">Achternaam:</label>
+            <div><label for="lastname">Surname:</label>
             <input type="text" id="lastname" name="lastname" value="<?php if (isset($lastname)) { echo $lastname; } ?>"/></div>
 
             <div><label for="email">E-mail:</label>
             <input type="email" id="email" name="email" value="<?php if (isset($email)) { echo $email; } ?>"/></div>
 
-            <div><label for="phone">Telefoon:</label>
-            <input type="text" id="phone" name="phone" value="<?php if (isset($phone)) { echo $phone; } ?>"/></div>
+                <div><label for="pwd">Password:</label>
+                    <input type="password" id="pwd" name="pwd" value="<?php if (isset($password)) { echo $password; } ?>"/></div>
 
-            <div><label for="date">Datum:</label>
-            <input type="date" id="date" name="date" min="2021-01-01" max="2025-12-31" value="<?php if (isset($date)) { echo $date; } ?>"/></div>>
-
-            <div><label for="time">Tijd:</label>
-                <input type="time" id="time" name="time" value="<?php if (isset($time)) { echo $time; } ?>"/></div>
-
-            <div> <input type="submit" name="submit" value="Submit"/></div>
+                <div> <input type="submit" name="submit" value="Submit"/></div>
 
         </form>
         </div>
     </section>
-
-    <section>
-    <h1>Gallery</h1><br>
-        <div class="img-slider">
-            <div class="img-container">
-            <div class="slide active">
-                <img src="images/gallery-pic1.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic2.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic3.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic4.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic5.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-                <div class="slide">
-                <img src="images/gallery-pic6.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-                <div class="slide">
-                <img src="images/gallery-pic7.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic8.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-                <div class="slide">
-                <img src="images/gallery-pic9.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic10.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic11.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic12.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-                <div class="slide">
-                <img src="images/gallery-pic13.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-            </div>
-
-            <div class="navigation">
-                <div class="btn active"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-            </div>
-        </div>
-    </section>
-
-</main>
-<script src="./js/imageslider.js"></script>
-</body>
-<footer>
-    <a href="#">Twitter</a> | <a href="https://www.instagram.com/ramiskapsalon/?hl=nl">Instagram</a> | <a href="https://www.facebook.com/ramiskapsalon/">Facebook</a>
-</footer>
 </html>
