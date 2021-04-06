@@ -16,10 +16,10 @@
         <div class="dropdown">
             <button class="dropbtn">BIRD</button>
             <div class="dropdown-content">
-                <a href="#">Album Collectie</a>
-                <a href="#">Register</a>
-                <a href="#">Doneren</a>
-                <a href="#">Contact</a>
+                <a href="slideshow.php">Album Collectie</a>
+                <a href="register.php">Register</a>
+                <a href="https://bird-rotterdam.nl/support-bird/">Doneren</a>
+                <a href="#donate">Contact</a>
             </div>
         </div>
     </nav>
@@ -75,9 +75,9 @@
         <br>
             <a>info@bird-rotterdam.nl<br></a>
        <br>
-            <a href="https://www.instagram.com/birdrotterdam/">Instagram<br></a>
-            <a href="https://www.facebook.com/BIRDrotterdam">Facebook<br></a>
-            <a href="https://twitter.com/Bird_Rdam">Twitter<br></a>
+            <a style="color: blue" href="https://www.instagram.com/birdrotterdam/">Instagram<br></a>
+            <a style="color: blue" href="https://www.facebook.com/BIRDrotterdam">Facebook<br></a>
+            <a style="color: blue" href="https://twitter.com/Bird_Rdam">Twitter<br></a>
     </div>
 
     <div class="main">
