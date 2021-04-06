@@ -14,7 +14,7 @@
 <header>
     <nav>
         <div class="dropdown">
-            <button class="dropbtn">BIRD</button>
+            <img src="https://res.cloudinary.com/yungdorf/image/upload/v1617715167/dropdownmenu_g4qw1b.png">
             <div class="dropdown-content">
                 <a href="slideshow.php">Album Collectie</a>
                 <a href="register.php">Register</a>
@@ -87,16 +87,16 @@
             function myMap() {
                 var mapProp= {
                     center:new google.maps.LatLng(51.92743714921707, 4.474110368090831),
-                    zoom:5,
+                    zoom:15,
                 };
                 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
             }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPO_Z1dHg6fj1fxBG-0vGFACcpduYUeKM&callback=myMap"></script>
     </div>
     </summary>
 </footer>
-</html>
+</html>`
 
 
 
