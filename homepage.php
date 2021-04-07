@@ -49,7 +49,13 @@
 <section id="register">
     <p>Our team of four set out to provide people from all ages and backgrounds with a taste of their favorite venue. Whether you like BIRD for the soothing jazz sounds, the raw hiphop beats or even just the amazing food and cozy restaurant vibe,
     we've got you covered. Follow the link below to register for the virtual reality chatroom, and we'll take care of the rest. You can meet up with friends, family and other BIRD-goers from the comfort of your own home. It's safe AND fun!</p>
+
+    <video width="1280" height="720" controls>
+        <source src="video/BIRDVRWorld.mp4" type="video/mp4">
+    </video>
+
 </section>
+
 <article>
     <a href="create.php">Sign up here!</a><br>
 </article>

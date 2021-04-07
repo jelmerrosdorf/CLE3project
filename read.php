@@ -23,19 +23,19 @@ mysqli_close($db);
 <!doctype html>
 <html lang="nl">
 <head>
-    <title>Accounts</title>
+    <title>BIRD User Accounts</title>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style2.css"/>
 </head>
 <body>
 <table>
     <thead>
     <tr>
         <th>#</th>
-        <th>Voornaam</th>
-        <th>Achternaam</th>
-        <th>E-mailadres</th>
-        <th>Wachtwoord</th>
+        <th>First name</th>
+        <th>Surname</th>
+        <th>E-mail</th>
+        <th>Password</th>
     </tr>
     </thead>
     <tbody>
@@ -46,11 +46,12 @@ mysqli_close($db);
             <td><?= $account['surname'] ?></td>
             <td><?= $account['email'] ?></td>
             <td><?= $account['password'] ?></td>
-            <td><a href="delete.php?id=<?= $account['id'] ?>">Verwijder</a></td>
+            <td><a href="delete.php?id=<?= $account['id'] ?>">Delete</a></td>
         </tr>
     <?php } ?>
     </tbody>
 </table>
+<br><a href="homepage.php">Back</a>
 </body>
 </html>
 

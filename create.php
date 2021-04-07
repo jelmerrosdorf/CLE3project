@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
 
 
         if ($result) {
-            header("Location: CLE3project/confirmation.php?firstname=$firstname&lastname=$surname&email=$email&password=$password");
+            header("Location: /hrfiles/CLE3-project-website/read.php?firstname=$firstname&surname=$surname&email=$email&password=$password");
             exit;
         } else {
 
@@ -94,17 +94,17 @@ if (isset($_POST['submit'])) {
 
             <form action="" method="post">
 
-            <div><label for="firstname">Name:</label>
+            <div><label for="firstname">First name:</label>
             <input type="text" id="firstname" name="firstname" value="<?php if (isset($firstname)) { echo $firstname; } ?>"/></div>
 
-            <div><label for="lastname">Surname:</label>
-            <input type="text" id="lastname" name="lastname" value="<?php if (isset($lastname)) { echo $lastname; } ?>"/></div>
+            <div><label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" value="<?php if (isset($surname)) { echo $surname; } ?>"/></div>
 
             <div><label for="email">E-mail:</label>
             <input type="email" id="email" name="email" value="<?php if (isset($email)) { echo $email; } ?>"/></div>
 
-                <div><label for="pwd">Password:</label>
-                    <input type="password" id="pwd" name="pwd" value="<?php if (isset($password)) { echo $password; } ?>"/></div>
+                <div><label for="password">Password:</label>
+                    <input type="password" id="password" name="password" value="<?php if (isset($password)) { echo $password; } ?>"/></div>
 
                 <div> <input type="submit" name="submit" value="Submit"/></div>
 

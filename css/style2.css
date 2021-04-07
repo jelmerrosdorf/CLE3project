@@ -1,0 +1,203 @@
+body {
+    margin : 0px ;
+    padding : 0px ;
+    color : #000000;
+    font-family: sans-serif;
+    background-color: white;
+    text-decoration: none;
+}
+
+nav {
+    padding: 0px 0px;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+main {
+    display:flex;
+    text-decoration: none;
+}
+
+main div {
+    padding: 50px 50px;
+    flex-grow: 10;
+    text-align:center;
+    background-color:#F5EFE6;
+    transition: all 0.4s ease-out;
+    text-decoration: none;
+}
+ main div:hover {
+    background-color:#F5EFE6;
+    color: dimgrey ;
+    text-decoration: none;
+}
+
+div, section {
+    box-sizing:border-box;
+    text-decoration: none;
+}
+
+h1 {
+    vertical-align: bottom;
+    margin: 5px;
+    font-size: 3em;
+    text-align: center;
+}
+
+
+
+footer a {
+    color:#000000;
+}
+
+section {
+    margin: 0px;
+    padding: 200px;
+    background-color:#F5EFE6;
+}
+
+article {
+    margin: 0px;
+    padding: 50px;
+    background-color:#000000;
+    font-weight:bolder;
+    text-align:center;
+}
+
+article a{
+    color:white;
+    font-size: 1em;
+
+}
+
+/* procent van de parent */
+img {
+    width : 100%;
+}
+head {
+    background-color:#000000;
+    padding: 70px 10px;
+    font-size:1.5em;
+    font-weight:bolder;
+    color:white;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    vertical-align: bottom;
+    padding: 10px 10px;
+    height:600px;
+    font-size:1.5em;
+    font-weight:bolder;
+    color:white;
+    background-image: url(https://res.cloudinary.com/yungdorf/image/upload/v1615838227/club_ygfuxt.png);
+
+);
+
+    background-size:cover;
+    background-position:center;
+}
+
+footer {
+    background-color:#ffffff;
+    text-align:center;
+    padding: 20px;
+    font-size:1.5em;
+);
+
+}
+summary {
+    padding: 50px;
+    font-size:0.5em;
+    font-weight:bolder;
+    color:white;
+}
+
+@media screen and (max-width: 150px) {
+    nav {    font-size:1.0em;
+        font-weight:bolder;
+        color:white;
+        display:block;
+    }
+}
+
+* {
+    box-sizing:border-box;
+}
+
+.menu {
+    width: 50%;
+    float: left;
+    padding: 50px;
+    border: 1px solid white;
+    color:black;
+    text-align: left;
+    font-size:0.5em;
+
+}
+
+.main {
+    width: 50%;
+    float: right;
+    padding: 50px;
+    border: 1px solid white;
+    color:black;
+    text-align: left;
+    font-size:0.3em;
+}
+a:link{
+    text-decoration: none;
+}
+
+style
+     /* Style The Dropdown Button */
+ .dropbtn {
+     background-color: #F5EFE6;
+     color: black;
+     padding: 0px;
+     font-size: 2px;
+     border: black;
+     cursor: pointer;
+     image:10px
+ }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: static;
+    background-color: #F5EFE6;
+    min-width: 50px;
+    box-shadow: 0px 8px 6px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    font-size: 20px;
+    padding: 2px 2px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #F5EFE6}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #F5EFE6;
+}
+
